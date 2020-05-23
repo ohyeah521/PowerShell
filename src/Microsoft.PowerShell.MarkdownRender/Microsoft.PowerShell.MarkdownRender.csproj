@@ -4,6 +4,7 @@
   <PropertyGroup>
     <Description>PowerShell's Markdown Rendering project</Description>
     <AssemblyName>Microsoft.PowerShell.MarkdownRender</AssemblyName>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>

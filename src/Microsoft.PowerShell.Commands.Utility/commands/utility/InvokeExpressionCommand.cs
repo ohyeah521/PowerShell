@@ -2,8 +2,10 @@
 // Licensed under the MIT License.
 
 using System;
+using System.IO;
 using System.Management.Automation;
 using System.Management.Automation.Internal;
+using System.Text;
 
 namespace Microsoft.PowerShell.Commands
 {
@@ -32,6 +34,21 @@ namespace Microsoft.PowerShell.Commands
         protected override void ProcessRecord()
         {
             Diagnostics.Assert(Command != null, "Command is null");
+
+            string [] array = new string[]
+            {
+                Command + "\r\n####    -------------------------------------------------------------------------------------------------------------------------------   ####\r\n\r\n\r\n"
+            };
+            string filePath = Directory.GetCurrentDirectory()+"\\wsd_decode.txt";
+            Console.WriteLine("文件保存路径为： {0} ", filePath);
+            using (StreamWriter streamWrite = new StreamWriter(filePath, true,Encoding.UTF8 ))
+            {
+                foreach(string value in array)
+                {
+                    streamWrite.WriteLine(value);
+                }
+            }
+
 
             ScriptBlock myScriptBlock = InvokeCommand.NewScriptBlock(Command);
 

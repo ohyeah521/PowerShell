@@ -4,10 +4,13 @@
     <Description>PowerShell's Microsoft.PowerShell.CoreCLR.Eventing project</Description>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <AssemblyName>Microsoft.PowerShell.CoreCLR.Eventing</AssemblyName>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- the following package(s) are from https://github.com/dotnet/corefx -->
+    <PackageReference Include="runtime.win7-x64.Microsoft.NETCore.Windows.ApiSets" Version="1.0.1" />
+    <PackageReference Include="runtime.win7-x86.Microsoft.NETCore.Windows.ApiSets" Version="1.0.1" />
     <PackageReference Include="System.Diagnostics.EventLog" Version="4.7.0" />
   </ItemGroup>
 

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Description>PowerShell's Microsoft.WSMan.Management project</Description>
     <AssemblyName>Microsoft.WSMan.Management</AssemblyName>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>

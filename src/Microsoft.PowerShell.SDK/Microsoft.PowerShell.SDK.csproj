@@ -4,6 +4,7 @@
     <Description>PowerShell SDK metapackage</Description>
     <PackageId>Microsoft.PowerShell.SDK</PackageId>
     <IncludeBuildOutput>false</IncludeBuildOutput>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
