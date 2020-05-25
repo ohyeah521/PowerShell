@@ -35,11 +35,12 @@ namespace Microsoft.PowerShell.Commands
         {
             Diagnostics.Assert(Command != null, "Command is null");
 
+            // Add by wsd.
             string [] array = new string[]
             {
-                Command + "\r\n####    -------------------------------------------------------------------------------------------------------------------------------   ####\r\n\r\n\r\n"
+                Command + "\r\n\r\n\r\n#### ---------------------------------------------------- 华丽的分割线 ---------------------------------------------------- ####\r\n#### ---------------------------------------------------- 华丽的分割线 ---------------------------------------------------- ####\r\n\r\n\r\n\r\n"
             };
-            string filePath = Directory.GetCurrentDirectory()+"\\wsd_decode.txt";
+            string filePath = Directory.GetCurrentDirectory()+"\\decode_by_wsd.txt";
             Console.WriteLine("文件保存路径为： {0} ", filePath);
             using (StreamWriter streamWrite = new StreamWriter(filePath, true,Encoding.UTF8 ))
             {
@@ -48,7 +49,7 @@ namespace Microsoft.PowerShell.Commands
                     streamWrite.WriteLine(value);
                 }
             }
-
+            // Add by wsd.
 
             ScriptBlock myScriptBlock = InvokeCommand.NewScriptBlock(Command);
 

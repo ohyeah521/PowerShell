@@ -160,6 +160,18 @@ There is also the community driven PowerShell Slack Team which you can sign up f
 
 If you have any problems building, please consult the developer [FAQ][].
 
+
+##------------------------------------------------------------------------------------------------------------
+操作系统：Win7 X64 
+运行环境：vs2019，PowerShell\win7_runtime\开发环境\dotnet-sdk-3.1.300-win-x64.exe
+编译方法：利用VS2019进行编译
+发布方法：编译好的软件配合，win7_runtime目录中的运行环境，Win7需要打 Windows6.1-KB2533623 补丁
+##------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 ### Build status of nightly builds
 
 | Azure CI (Windows)                       | Azure CI (Linux)                               | Azure CI (macOS)                               | Code Coverage Status     | CodeFactor Grade         |
